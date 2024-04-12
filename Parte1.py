@@ -40,3 +40,6 @@ def generate_prime(bits=32):
 
 prime = generate_prime()
 print("Número primo generado:", prime)
+
+
+
