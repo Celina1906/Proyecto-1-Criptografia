@@ -1,4 +1,5 @@
 from math import gcd
+
 def es_primo(num):
     if num < 2:
         return False
@@ -19,7 +20,7 @@ def primer_primo_divisor(n):
 def mcd(a, b):
     """
     Calcula el máximo común divisor (MCD) de dos números utilizando el algoritmo de Euclides.
-"""
+    """
     while b != 0:
         r=  a % b
         a= b
@@ -40,6 +41,7 @@ def ord_shanks(a, n):
             return i * m
     
     return None
+
 def euler(n):
     if n<1:
         print("Error n debe ser mayor a uno")
@@ -49,6 +51,7 @@ def euler(n):
             if mcd(i,n)==1:
                 cont=cont+1
     return cont
+
 def euler2(n):
     if n < 1:
         print("Error: n debe ser mayor a uno")
@@ -74,12 +77,14 @@ def orden(a, n):
         if pow(a, t, n) == 1:#La función pow() toma dos argumentos obligatorios: la base y el exponente, y opcionalmente un tercer argumento que especifica el módulo (si se desea calcular la potencia modular).
             return t
     return None
+
 def genZn(n):
     ordenZn=euler2(n)
     for alpha in range(1, n):
         if(orden(alpha,n)==ordenZn):
             print(alpha," Es un generador del grupo multiplicativo de Z",n)
             break;
+
 def genZn2(n):
     phi=euler2(n) #Se puede cambiar por n-1 si es n es primo
     p=primer_primo_divisor(phi)
