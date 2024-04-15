@@ -33,15 +33,4 @@ def invMultMod(nums, prime):
             inv[num] = None
     return inv
 
-# Se genera un número primo de 32 bits
-prime = Parte1.generate_prime(32)
-
-# Se crea una lista con enteros menores al número primo
-listNums = [x for x in range(1, 100001)]
-
-invsMultDict = invMultMod(listNums, prime)
-
-print(invsMultDict)
-
-
 

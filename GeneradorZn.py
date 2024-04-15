@@ -52,9 +52,13 @@ def generator_of_Zn(n):
     phi = euler_function(n)
     p = first_prime_divisor(phi)
     exp = round(phi/p)
+    cont = 0
     for alpha in range(1, n):
         if pow(alpha, exp, n) != 1:
-            print(alpha, " es un generador del grupo multiplicativo de Z", n)
+                print(alpha, " es un generador del grupo multiplicativo de Z", n)
+                cont += 1
+        if cont >= 3:
+            break
             
 
-generator_of_Zn(71)  
+#generator_of_Zn(71)  

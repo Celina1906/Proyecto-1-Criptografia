@@ -55,5 +55,5 @@ def generate_prime(bits):
             return n
 
 #Genera un número primo de 32 bits de longitud
-primo = generate_prime(32)
-print("Número primo generado:", primo)
+# primo = generate_prime(32)
+# print("Número primo generado:", primo)
